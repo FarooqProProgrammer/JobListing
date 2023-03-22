@@ -1,0 +1,28 @@
+.Google_cta {
+    width: 90%;
+    height: 100px;
+    margin: 0 auto;
+    border: 2px solid rgb(173, 170, 170);
+
+
+    .Icons {
+        display: none;
+    }
+    @media (max-width:990px) {
+        border: none;
+        gap: 10px;
+        input {
+            width: 90%;
+        }
+        button {
+            display: none;
+        }
+        p {
+            display: none;
+        }
+        .Icons {
+            display: block;
+        }
+    }
+}
+

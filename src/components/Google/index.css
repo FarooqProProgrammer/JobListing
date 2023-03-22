@@ -1,0 +1,27 @@
+.Google_cta {
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  border: 2px solid rgb(173, 170, 170);
+}
+.Google_cta .Icons {
+  display: none;
+}
+@media (max-width: 990px) {
+  .Google_cta {
+    border: none;
+    gap: 10px;
+  }
+  .Google_cta input {
+    width: 90%;
+  }
+  .Google_cta button {
+    display: none;
+  }
+  .Google_cta p {
+    display: none;
+  }
+  .Google_cta .Icons {
+    display: block;
+  }
+}/*# sourceMappingURL=index.css.map */
