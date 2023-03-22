@@ -5,6 +5,7 @@ import Blog3 from "../../assets/BlogImg Three.jpeg"
 import Blog4 from "../../assets/BlogImgFour.jpeg"
 import Blog5 from "../../assets/BlogImgFive.jpeg"
 import Blog6 from "../../assets/BlogImgSix.jpeg"
+import BlogPost from './BlogPost'
 
 
 export default function BlogSection() {
@@ -16,84 +17,14 @@ export default function BlogSection() {
                     <p class="text-xl text-gray-600 mb-8">Stay up-to-date with our latest blog posts.</p>
                 </div>
                 <div class="flex flex-wrap -mx-4">
-                    <div class="md:w-1/3 px-4 mb-8">
-                        <div class="bg-white border border-gray-300 shadow-md p-8 rounded-lg">
-                            <a href="#">
-                                <img class="mb-6 rounded-md" src={Blog1}
-                                    alt="Blog post image" />
-                                <h3 class="text-2xl font-bold text-gray-800 mb-4">Blog Post Title</h3>
-                            </a>
-                            <p class="text-lg text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="md:w-1/3 px-4 mb-8">
-                        <div class="bg-white border border-gray-300 shadow-md p-8 rounded-lg">
-                            <a href="#">
-                                <img class="mb-6 rounded-md" src={Blog2}
-                                    alt="Blog post image" />
-                                <h3 class="text-2xl font-bold text-gray-800 mb-4">Blog Post Title</h3>
-                            </a>
-                            <p class="text-lg text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="md:w-1/3 px-4 mb-8">
-                        <div class="bg-white border border-gray-300 shadow-md p-8 rounded-lg">
-                            <a href="#">
-                                <img class="mb-6 rounded-md" src={Blog3}
-                                    alt="Blog post image" />
-                                <h3 class="text-2xl font-bold text-gray-800 mb-4">Blog Post Title</h3>
-                            </a>
-                            <p class="text-lg text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="md:w-1/3 px-4 mb-8">
-                        <div class="bg-white border border-gray-300 shadow-md p-8 rounded-lg">
-                            <a href="#">
-                                <img class="mb-6 rounded-md" src={Blog4}
-                                    alt="Blog post image" />
-                                <h3 class="text-2xl font-bold text-gray-800 mb-4">Blog Post Title</h3>
-                            </a>
-                            <p class="text-lg text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="md:w-1/3 px-4 mb-8">
-                        <div class="bg-white border border-gray-300 shadow-md p-8 rounded-lg">
-                            <a href="#">
-                                <img class="mb-6 rounded-md" src={Blog5}
-                                    alt="Blog post image" />
-                                <h3 class="text-2xl font-bold text-gray-800 mb-4">Blog Post Title</h3>
-                            </a>
-                            <p class="text-lg text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="md:w-1/3 px-4 mb-8">
-                        <div class="bg-white border border-gray-300 shadow-md p-8 rounded-lg">
-                            <a href="#">
-                                <img class="mb-6 rounded-md" src={Blog6}
-                                    alt="Blog post image" />
-                                <h3 class="text-2xl font-bold text-gray-800 mb-4">Blog Post Title</h3>
-                            </a>
-                            <p class="text-lg text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                href="#">Read More</a>
-                        </div>
-                    </div>
+                    
+                    <BlogPost img={Blog1} Description={"Even for senior engineers, job searches can be confusing, frustrating affairs. When you're a junior engineer looking for your first job"} Title={"The Truth About Finding Your First Engineering Job"}/>
+                    <BlogPost img={Blog2} Description={"It feels like the rise of remote works has been a top conversation in tech for years, but despite the enthusiasm and attention"} Title={"Why Naval Ravikant Thinks Remote Work Is The Future"}/>
+                    <BlogPost img={Blog3} Description={"You're trying to evaluate the company while still impressing your interviewers, and that balance can be tricky"} Title={"30 Questions to Ask Before Joining a Startup"}/>
+                    <BlogPost img={Blog4} Description={"Few tech sectors are capturing the public’s collective imagination as much as space. Privatized spaceflight, or “NewSpace,” is attracting"} Title={"18 Innovative Space Startups Hiring Now"}/>
+                    <BlogPost img={Blog5} Description={"Either Crypto has a great PR team, or the internet-based medium of exchange is truly taking the world by storm"} Title={"19 Hot Crypto Startups Hiring Remotely in 2022"}/>
+                    <BlogPost img={Blog6} Description={"It is no surprise by now that women make great leaders. In the US alone, women-led businesses generated more than 1.8 trillion dollars"} Title={"20 Women-Led Startups Expanding Their Remote Teams in 2022"}/>
+                    
                     
                 </div>
             </div>

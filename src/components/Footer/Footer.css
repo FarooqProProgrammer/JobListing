@@ -1,0 +1,607 @@
+* {
+    box-sizing: border-box;
+}
+
+.w-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px;
+}
+
+.w-container::before,
+.w-container::after {
+    content: " ";
+    display: table;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.w-container::after {
+    clear: both;
+}
+
+.container {
+    position: static;
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+.section-wrap {
+    margin-bottom: -1px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-top: 1px solid rgb(220, 220, 220);
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.footer-dropdowns {
+    display: block;
+    padding-top: 16px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    align-items: flex-start;
+}
+
+.w-dropdown {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 900;
+}
+
+.dropdown {
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+    position: relative;
+    vertical-align: top;
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+    padding: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+}
+
+.w-dropdown-toggle {
+    user-select: none;
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 40px;
+}
+
+.w-dropdown-toggle:focus {
+    outline: 0px;
+}
+
+.dropdown_trigger {
+    width: 100%;
+    height: 40px;
+    padding: 8px 50px 12px 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 212, 212);
+    border-radius: 4px;
+}
+
+.dropdown_trigger:hover {
+    border-color: rgb(20, 63, 205);
+    background-color: rgb(234, 235, 255);
+    color: rgb(20, 63, 205);
+}
+
+.w-icon-arrow-down::before,
+.w-icon-dropdown-toggle::before {
+    content: "";
+}
+
+.w-icon-dropdown-toggle {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto 20px auto auto;
+    width: 1em;
+    height: 1em;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+.w-dropdown-list {
+    position: absolute;
+    background: rgb(221, 221, 221);
+    display: none;
+    min-width: 100%;
+}
+
+.dropdown_content {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(224, 224, 224);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    background-color: transparent;
+}
+
+a:active,
+a:hover {
+    outline: 0px;
+}
+
+.w-dropdown-link {
+    padding: 10px 20px;
+    display: block;
+    color: rgb(34, 34, 34);
+}
+
+.w-dropdown-link:focus {
+    outline: 0px;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: rgb(20, 63, 205);
+}
+
+.block-link {
+    display: inline-block;
+    width: 100%;
+    transition: opacity 200ms ease 0s;
+    color: rgb(56, 56, 56);
+    text-decoration: none;
+}
+
+.block-link:hover {
+    background-color: rgb(234, 235, 255);
+    color: rgb(20, 63, 205);
+}
+
+@media screen and (max-width: 991px) {
+    .w-container {
+        max-width: 728px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .w-container {
+        max-width: none;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        position: static;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .container {
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section-wrap {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .section-wrap {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .footer-dropdowns {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .footer-dropdowns {
+        padding-top: 16px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .dropdown {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .dropdown {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .dropdown {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .dropdown {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .dropdown {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    a {
+        color: rgb(0, 0, 0);
+    }
+}

@@ -7,11 +7,14 @@ import Talent from './components/NeedTalent/Talent'
 import Testimonial from './components/Testimonial'
 import Features from './components/Features'
 import BlogSection from './components/BlogSection'
+import Hero from './components/Hero'
+import Footer from './components/Footer/Footer'
 
 export default function App() {
   return (
     <div>
       <Navbar />
+      <Hero />
       <Google />
       <Statstics />
       <GotTalent />
@@ -19,6 +22,7 @@ export default function App() {
       <Testimonial />
       <Features />
       <BlogSection />
+      <Footer />
     </div>
   )
 }
