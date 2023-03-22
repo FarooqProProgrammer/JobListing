@@ -1,18 +1,80 @@
-import React from 'react'
-import "./index.css"
+import React, { useState } from "react";
+import "./index.css";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/Logo.svg"
 
-export default function Navbar() {
+
+function Navbar() {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
   return (
-    <div className='Header lg:px-24 md:px-0 sm:px-0 border-b-2 border-black my-4 '>
-        <h2 className='text-4xl font-bold'>WellFound</h2>
+    <>
+      <nav className="Navbar">
+        <div className="nav-container">
+          <Link to="/" className="nav-logo w-[50px] h-[50px]">
+            Well Found
+          </Link>
 
-        <ul className='NavLink flex gap-6'>
-            <li><a href="#" className='Links'>Discover</a></li>
-            <li><a href="#" className='Links' >For Jobseeker</a></li>
-            <li><a href="#" className='Links' >For Companies</a></li>
-            <li><a href="#"><button className='Login px-3 py-2'>Login In</button></a></li>
-            <li><a href="#"><button className='Register px-3 py-2'>Sign up</button></a></li>
-        </ul>
-    </div>
-  )
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link
+                to="/"
+                activeClassName="active"
+                className="nav-links text-gray-500"
+                onClick={handleClick}
+              >
+                Discover
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/"
+                className="nav-links text-gray-500"
+                onClick={handleClick}
+              >
+                ForjobSeekers
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/"
+ 
+                className=" text-gray-500"
+                onClick={handleClick}
+              >
+                For Companies
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/"
+  
+                className=" text-gray-500"
+                onClick={handleClick}
+              >
+                  <button className="shadow-md px-5 py-2">Log In</button>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/"
+  
+                className=" text-gray-500"
+                onClick={handleClick}
+              >
+                  <button className="shadow-md px-5 py-2 bg-black text-white">Sign up</button>
+              </Link>
+            </li>
+            
+          </ul>
+          <div className="nav-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
 }
+
+export default Navbar;
